@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/cyber-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cyber-container {
+  background: rgba(13, 17, 23, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(99, 179, 237, 0.1);
+  box-shadow: 0 0 20px rgba(99, 179, 237, 0.1);
+}
+
+.price-update {
+  animation: price-flash 0.3s ease-in-out;
+}
+
+@keyframes price-flash {
+  0% {
+    opacity: 0.5;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #4fd1c5;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 5px #4fd1c5;
+  }
+}
+
+.cyber-grid {
+  background-image: linear-gradient(rgba(99, 179, 237, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 179, 237, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@keyframes price-update {
+  0% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-price-update {
+  animation: price-update 0.3s ease-out;
+} 
