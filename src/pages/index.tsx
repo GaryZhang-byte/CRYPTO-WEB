@@ -78,7 +78,7 @@ export default function Home() {
         </div>
 
         {/* 搜索部分 */}
-        <section className="cyber-container rounded-lg p-6">
+        <section className="cyber-container rounded-lg p-6 backdrop-blur-sm bg-gray-800/30 border border-secondary/20">
           <div className="space-y-4">
             <label htmlFor="search" className="block text-xl font-medium text-cyber-blue">
               Search Cryptocurrency
@@ -86,7 +86,7 @@ export default function Home() {
             <input
               type="text"
               id="search"
-              className="mt-1 block w-full bg-cyber-dark border-cyber-blue border-opacity-30 text-white focus:border-cyber-blue focus:ring-cyber-blue rounded-md p-2"
+              className="mt-1 block w-full bg-gray-700/50 text-white focus:border-cyber-blue focus:ring-cyber-blue rounded-md p-2"
               placeholder="Enter coin name or symbol..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -125,7 +125,7 @@ export default function Home() {
                   <input
                     type="number"
                     id="alertPrice"
-                    className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white"
+                    className="mt-1 block w-full rounded-md bg-gray-700/50 text-white"
                     placeholder="Enter price..."
                     value={alertPrice}
                     onChange={(e) => setAlertPrice(e.target.value)}
@@ -140,7 +140,7 @@ export default function Home() {
                   <select
                     value={selectedSound}
                     onChange={(e) => setSelectedSound(e.target.value as any)}
-                    className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white"
+                    className="mt-1 block w-full rounded-md bg-gray-700/50 text-white"
                   >
                     <option value="police">Police Siren</option>
                     <option value="alarm">Alarm</option>

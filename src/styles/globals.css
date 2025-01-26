@@ -5,56 +5,31 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-900;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/cyber-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  background: #0d1117;
   font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+  color: white;
+}
+
+.crypto-card {
+  @apply bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 transition-all duration-300;
+  border: 1px solid rgba(65, 184, 231, 0.2);
+}
+
+.crypto-card:hover {
+  @apply transform scale-105;
+  border-color: rgba(65, 184, 231, 0.4);
+  box-shadow: 0 0 20px rgba(65, 184, 231, 0.2);
+}
+
+.price-value {
+  @apply text-2xl font-bold text-green-400;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
 }
 
 .cyber-container {
-  background: rgba(13, 17, 23, 0.8);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(99, 179, 237, 0.1);
-  box-shadow: 0 0 20px rgba(99, 179, 237, 0.1);
+  @apply border border-blue-400/20 bg-gray-800/30 backdrop-blur-sm;
+  box-shadow: 0 0 20px rgba(65, 184, 231, 0.1);
 }
-
-.price-update {
-  animation: price-flash 0.3s ease-in-out;
-}
-
-@keyframes price-flash {
-  0% {
-    opacity: 0.5;
-    transform: scale(1.05);
-    text-shadow: 0 0 10px #4fd1c5;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    text-shadow: 0 0 5px #4fd1c5;
-  }
-}
-
-.cyber-grid {
-  background-image: linear-gradient(rgba(99, 179, 237, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 179, 237, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-@keyframes price-update {
-  0% {
-    opacity: 0.5;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-price-update {
-  animation: price-update 0.3s ease-out;
-} 
